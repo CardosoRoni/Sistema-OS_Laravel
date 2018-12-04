@@ -1,0 +1,46 @@
+
+body{
+	background-color: #F5F5F5;
+	font-family: verdana;
+	margin-top: 50px;
+}
+h3{ text-align:center
+}
+
+nav.navbar.navbar-default{
+	background-color: #008B8B;
+	border-color: #2e6da4;
+}
+nav.navbar.navbar-default a{
+	color:white;
+}
+li p.navbar-text, a.navbar-brand{
+	color:orange!important;
+	font-weight: bolder;
+}
+footer.footer{
+	background-color: #008B8B;
+	border-color: #2e6da4;
+	margin-top: 55px;
+	border-radius: 5px;
+
+}
+footer.footer p{
+	padding: 6px;
+	color:orange!important;
+}
+table{
+	margin-top: 50px;
+
+}
+th{
+	color:green!important;
+	background-color:#DCDCDC; 
+	border-color: #2e6da4;
+}
+.datepicker{
+   cursor: pointer;
+   background-color: #F5F5F5;
+   border-color: orange!important;
+   border-radius: 15px;
+}
