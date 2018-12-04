@@ -51,10 +51,9 @@ class OrdemController extends Controller
             ->get();
           return view('ordem.listaordens',['ordens' => $ordem]);
    */
-          //selects
         
       }
-        // metodo para adicionar no formulario
+        //  metodo para adicionar no formulario
       public function novaordem(){
         $list_clientes = Cliente::all()->sortBy('nome');
         $list_servicos = Servico::all()->sortBy('nome');
@@ -66,8 +65,10 @@ class OrdemController extends Controller
      public function adicionaordem(ordensRequest $request){
       //validando os campos do formulario 
        Ordem::create($request->all());
-       return redirect()->action('OrdemController@listaordens')->withInput(Request::only('cliente_id'));
+       return redirect()->action('OrdemController@listaordens')->withInput(Request::only('cliente_id','produto_id', 'servico_id');
      }
+
+
     //metodo para remover uma ordem:
      public function removeordem($id){
       $ordem = Ordem::find($id);
