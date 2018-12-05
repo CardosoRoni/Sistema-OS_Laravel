@@ -55,7 +55,7 @@ class OrdemController extends Controller
       }
         //  metodo para adicionar no formulario
       public function novaordem(){
-        $list_clientes = Cliente::all()->sortBy('nome');
+        $list_clientes = Cliente::pluck('nome', 'id');
         $list_servicos = Servico::all()->sortBy('nome');
         $list_produtos = Produto::all()->sortBy('nome');
        return view('ordem.novaordem',['clientes' => $list_clientes, 'servicos' => $list_servicos, 'produtos' => $list_produtos]);
@@ -64,8 +64,11 @@ class OrdemController extends Controller
     //metodo para adicionar nova ordem no banco
      public function adicionaordem(ordensRequest $request){
       //validando os campos do formulario 
+      Debugbar :: info ( $cliente ); 
        Ordem::create($request->all());
+
        return redirect()->action('OrdemController@listaordens')->withInput(Request::only('cliente_id','produto_id', 'servico_id');
+
      }
 
 
